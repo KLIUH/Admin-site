@@ -44,9 +44,27 @@
   font-weight: bold;
 }
 
+    ::placeholder {
+        color: #ffffff; /* Màu trắng sáng */
+    }
 
+    /* Định dạng giá trị trong trường input */
+    input[type="text"] {
+        color: #ffffff; /* Màu trắng sáng */
+    }
 
+        select.form-select {
+        color: #fff; /* Màu trắng sáng */
+        background-color: black; /* Màu nền */
+    }
 
+        select.form-select option {
+            color: #adb5bd; /* Màu văn bản trong tùy chọn */
+        }
+
+        input[type="number"] {
+        color: #fff; /* Màu trắng sáng */
+    }
       </style>
 </head>
 
@@ -205,29 +223,29 @@
                     <div class="row mb-3">
                       <div class="col">
                         <label for="productCode" class="form-label">Product Code</label>
-                        <input type="text" class="form-control" id="productCode" placeholder="0000001">
+                        <input type="text" class="form-control" id="productCode" value="0000001" placeholder=" ">
                       </div>
                       <div class="col">
                         <label for="productName" class="form-label">Product Name</label>
-                        <input type="text" class="form-control" id="productName" placeholder="Chair">
+                        <input type="text" class="form-control" id="productName" value="Chair" placeholder=" ">
                       </div>
                     </div>
                     <div class="row mb-3">
                         <div class="col">
                             <label for="title" class="form-label">Title *</label>
-                            <input type="text" class="form-control" id="title" placeholder="Chair">
+                            <input type="text" class="form-control" id="title" value="Chair" placeholder=" ">
                         </div>
                         <div class="col">
                             <label for="location" class="form-label">Location</label>
-                            <input type="text" class="form-control" id="location" placeholder="Nguyen Van Bao street, Go Vap Dist">
+                            <input type="text" class="form-control" id="location" value="Nguyen Van Bao street, Go Vap Dist" placeholder=" ">
                         </div>
                     </div>
                     <div class="mb-3">
                         <label for="supplier" class="form-label">Supplier</label>
                         <select class="form-select" id="supplier">
-                          <option value="Supplier X">Supplier X</option>
-                          <option value="Supplier Y">Supplier Y</option>
-                          <option value="Supplier Z">Supplier Z</option>
+                        <option value="Supplier X">Supplier X</option>
+                        <option value="Supplier Y">Supplier Y</option>
+                        <option value="Supplier Z">Supplier Z</option>
                         </select>
                       </div>
                     <div class="row mb-3">
@@ -258,29 +276,38 @@
                       </div>
                       <div class="col">
                         <label for="price" class="form-label">Price</label>
-                        <input type="text" class="form-control" id="price" placeholder="200$">
+                        <input type="text" class="form-control" id="price" value="200$" placeholder=" ">
                       </div>
                     </div>
+
+                   
+                      
         
                     <div class="row mb-3">
+                        <datalist id="dates">
+                            <option value="2023-08-01">
+                            <option value="2023-08-02">
+                            <option value="2023-08-03">
+                            <!-- Thêm các ngày khác vào đây -->
+                        </datalist>
                         <div class="col">
-                          <label for="start" class="form-label" >Start</label>
-                          <div class="input-group">
-                            <span class="input-group-text calendar-icon">
-                              <i class="bi bi-calendar" ></i>
-                            </span>
-                            <input type="date" class="form-control" id="start">
+                            <label for="start" class="form-label">Start</label>
+                            <div class="input-group">
+                              <span class="input-group-text calendar-icon">
+                                <i class="bi bi-calendar"></i>
+                              </span>
+                              <input type="text" class="form-control" id="start" list="dates" placeholder="dd/mm/yyyy">
+                            </div>
                           </div>
-                        </div>
-                        <div class="col">
-                          <label for="end" class="form-label">End</label>
-                          <div class="input-group">
-                            <span class="input-group-text calendar-icon">
-                              <i class="bi bi-calendar"></i>
-                            </span>
-                            <input type="date" class="form-control" id="end">
+                          <div class="col">
+                            <label for="end" class="form-label">End</label>
+                            <div class="input-group">
+                              <span class="input-group-text calendar-icon">
+                                <i class="bi bi-calendar"></i>
+                              </span>
+                              <input type="text" class="form-control" id="end" list="dates" placeholder="dd/mm/yyyy">
+                            </div>
                           </div>
-                        </div>
                       </div>
                     
                       <div class="row mb-2">
